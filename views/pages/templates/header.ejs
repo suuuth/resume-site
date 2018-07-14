@@ -1,0 +1,73 @@
+<!-- Author: Rohit Sen -->
+<?php
+require_once('config.php');
+globaljsvars; 
+print globaljsvars;
+?>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="<?php echo BASE_URL;?>assets/stylesheets/style.css" type="text/css">
+        <script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+        <script language="JavaScript" type ="text/javascript" src="<?php echo BASE_URL;?>assets/javascripts/header.js"></script>
+        <title>Marimba - </title>
+    </head>
+
+    <body>
+        <!--   Navigation Header   -->
+        <header class="navigation-header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-nav">
+                    <div class="left-section">
+                        <a href="index.php"><img class="logo-link" src="<?php echo BASE_URL;?>assets/images/logo.svg" alt="logo.svg"></a>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="responsive-menu">
+                            <a><a class="nav-link" id="menu-button">Menu</a><span class="dropdown-button"><img class="hamburger" src="<?php echo BASE_URL;?>assets/images/hamburger.svg" alt="hambrger.svg"/></span></a>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <ul class="nav" id="nav-menu">
+                            <li class="nav-item"><a class="nav-link unselected" id="index" href="<?php echo BASE_URL;?>index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link unselected" id="about" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link unselected" id="browse" href="<?php echo BASE_URL;?>browse.php">Browse</a></li>
+                            <li class="nav-item" id="drop-link">
+                                <a class="nav-link unselected" id="more">More</a>
+                                <span class="drop-carat">
+                                    <img src="<?php echo BASE_URL;?>assets/images/chevron-down.svg" alt="down-arrow.svg"/>
+                                </span>
+                                <ul>
+                                    <li class="browse-sub">
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>blog.php">Blog</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>carousel.php">Carousel</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>drawers.php">Drawers</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>fullRecord.php">Full Record</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>fullRecord-2.php">Full Record Alt</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>imageCardGrid.php">Image Card Grid</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>imageCardGrid-2.php">Image Card Grid Alt</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>mediaRecords.php">Media Records</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>mediaRecords-2.php">Media Records Alt</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>mediaRecord-one-image-ex.php">Media Record (single image)</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>mediaRecord.php">Media Record</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>tabs-2.php">Tabs</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>tabs-many.php">Many Tabs</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>text-modal.php">Text Modal</a>
+                                    <a class="nav-sublink" href="<?php echo BASE_URL;?>text-with-nav.php">Text with Navigation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link unselected" id="essays" href="<?php echo BASE_URL;?>essays.php">Essays</a></li>
+                            <li class="nav-item"><a class="nav-link unselected" id="search" href="<?php echo BASE_URL;?>search.php">Search</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+
