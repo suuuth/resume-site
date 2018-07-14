@@ -10,7 +10,8 @@
     "build:html": "htmlhint *.html",
     "build:js": "standard *.js",
     "build": "run-s build:*",
-    "deploy": "run-s build"
+    "deploy:surge": "surge --project . --domain https://kevin-sutherland.surge.sh",
+    "deploy": "run-s build deploy:surge"
   },
   "devDependencies": {
     "htmlhint": "^0.9.13",

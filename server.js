@@ -39,7 +39,6 @@ app.get('/', function (request, response) {
 })
 app.get('/resume', function (request, response) {
   response.render('pages/resume', {
-    //pages: pages[request.params.id]
     pages: pages
   })
 })
