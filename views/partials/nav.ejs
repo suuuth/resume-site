@@ -1,0 +1,17 @@
+<div id="main-nav-btn" class="open-nav">
+  <img src="../../images/burger.svg" class="burger"></img>
+</div>
+<nav id="nav" class="main-nav">
+  <div class="nav-wrap">
+    <div id="close-nav" class="close-btn">X</div>
+    <ul class="nav">
+      <% Object.keys(pages).forEach(function (id) { %>
+      <li><a href="<%= pages[id].location %>"><%= pages[id].title %></a></li>
+      <% }) %>
+    </ul>
+    <hr>
+    <ul class="nav">
+      <li><a href="/">Contact</a></li>
+    </ul>
+  </div>
+</nav>
