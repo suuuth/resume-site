@@ -7,7 +7,6 @@ var header = document.getElementById('header')
 var body = document.querySelector('main')
 var footer = document.querySelector('footer')
 var aboutMe = document.querySelector('.about-me-js')
-var scrollAbout = header.clientHeight
 
 function showHideNav () {
     showNav = !showNav
@@ -32,6 +31,7 @@ function hideNav () {
 }
 
 function aboutMeScroll () {
+    var scrollAbout = header.clientHeight
     window.scroll({
         top: scrollAbout,
         behavior: 'smooth'
