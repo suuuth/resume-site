@@ -6,6 +6,7 @@ var nav = document.getElementById('nav')
 var header = document.getElementById('header')
 var body = document.querySelector('main')
 var footer = document.querySelector('footer')
+var aboutMe = document.querySelector('.about-me-js')
 
 function showHideNav () {
     showNav = !showNav
@@ -29,8 +30,16 @@ function hideNav () {
     }
 }
 
+function aboutMeScroll () {
+    window.scroll({
+        top: 1000,
+        behavior: 'smooth'
+    })
+}
+
 navBtn.addEventListener('click', showHideNav)
 closeNavBtn.addEventListener('click', showHideNav)
 header.addEventListener('click', hideNav)
 body.addEventListener('click', hideNav)
 footer.addEventListener('click', hideNav)
+aboutMe.addEventListener('click', aboutMeScroll)

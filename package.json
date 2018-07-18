@@ -1,5 +1,5 @@
 {
-  "name": "express-practice-project",
+  "name": "Kevin-Sutherland-Resume",
   "version": "1.0.0",
   "scripts": {
     "dev:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
