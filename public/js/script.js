@@ -12,7 +12,7 @@ function showHideNav () {
     showNav = !showNav
 
     if (showNav) {
-        nav.style.display = "block"
+        nav.style.display = "flex"
         setTimeout(function () { 
             nav.classList.add('show')
          }, 100);
