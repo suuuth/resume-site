@@ -5,16 +5,7 @@ var port = process.env.PORT || 8080
 var pages = {}
 var githubPages = {}
 
-/*
-
-https://suuuth-js-firebase-intro.surge.sh/
-https://suuuth.github.io/MI-449-SS18-740-js-server-intro-jtrO3q
-https://suuuth-js-localstorage.surge.sh/
-https://suuuth-js-objects.surge.sh/
-https://suuuth-js-package-json-intro.surge.sh/
-https://suuuth-js-serving-content-with.herokuapp.com/
-
-*/
+// Github project links
 createPage({
   title: 'Firebase Project',
   location: 'https://suuuth-js-firebase-intro.surge.sh/',
@@ -58,6 +49,7 @@ createPage({
   project: 'github-project'
 })
 
+// website page links
 createPage({
   title: 'Home',
   heading: 'Welcome!',
@@ -78,23 +70,14 @@ createPage({
   location: '/portfolio'
 })
 
-// function createGitLink (page) {
-//   var id = Object.keys(githubPages).length
-//   githubPages[id] = page
-// }
-
 function createPage (page) {
   if (page.project === 'github-project') {
-    // createGitLink(page)
     let id = Object.keys(githubPages).length
     githubPages[id] = page
   } else {
     let id = Object.keys(pages).length
     pages[id] = page
   }
-
-  console.log(pages)
-  console.log(githubPages)
 }
 
 app.set('view engine', 'ejs')
