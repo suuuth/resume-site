@@ -6,7 +6,24 @@
   <div class="nav-wrap">
     <ul class="nav">
       <% Object.keys(pages).forEach(function (id) { %>
-      <li><a href="<%= pages[id].location %>"><%= pages[id].title %></a></li>
+      <li>
+        <% if (pages[id].title != 'Github') { %>
+          <a href="<%= pages[id].location %>"><%= pages[id].title %></a>
+        <% } else { %>
+          <a href="<%= pages[id].location %>"><%= pages[id].title %>
+            <ul class="sub-menu">
+              <% Object.keys(githubPages).forEach(function (id) { %>
+                <li>
+                  <a href="<%= githubPages[id].location %>"><%= githubPages[id].title %></a>
+                  <ul class="deep-menu">
+                    <li><a href="<%= githubPages[id].about %>">About This Project</a></li>
+                  </ul>
+                </li>
+              <% }) %>
+            </ul>
+          </a>
+        <% } %>
+      </li>
       <% }) %>
     </ul>
     <hr>

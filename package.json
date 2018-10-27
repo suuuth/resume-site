@@ -10,7 +10,7 @@
     "build:html": "htmlhint *.html",
     "build:js": "standard *.js",
     "build": "run-s build:*",
-    "deploy:surge": "surge --project . --domain https://kevin-sutherland.surge.sh",
+    "deploy:surge": "surge --project . --domain http://belle-monsieur-60000.herokuapp.com/",
     "deploy": "run-s build deploy:surge"
   },
   "devDependencies": {

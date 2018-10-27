@@ -3,6 +3,60 @@ var express = require('express')
 var app = express()
 var port = process.env.PORT || 8080
 var pages = {}
+var githubPages = {}
+
+/*
+
+https://suuuth-js-firebase-intro.surge.sh/
+https://suuuth.github.io/MI-449-SS18-740-js-server-intro-jtrO3q
+https://suuuth-js-localstorage.surge.sh/
+https://suuuth-js-objects.surge.sh/
+https://suuuth-js-package-json-intro.surge.sh/
+https://suuuth-js-serving-content-with.herokuapp.com/
+
+*/
+createPage({
+  title: 'Firebase Project',
+  location: 'https://suuuth-js-firebase-intro.surge.sh/',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-firebase-intro-T4LtxO/issues/1',
+  project: 'github-project'
+})
+createPage({
+  title: 'Simple JavaScript Web Server',
+  location: 'https://suuuth-js-server-intro.herokuapp.com/',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-server-intro-jtrO3q/issues/1',
+  project: 'github-project'
+})
+createPage({
+  title: 'JavaScript LocalStorage Project',
+  location: 'https://suuuth-js-localstorage.surge.sh/',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-localstorage-wMUDce/issues/1',
+  project: 'github-project'
+})
+createPage({
+  title: 'JavaScript Objects Project',
+  location: 'https://suuuth-js-objects.surge.sh/',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-objects-T4W3KQ/issues/1',
+  project: 'github-project'
+})
+createPage({
+  title: 'package.json Project',
+  location: 'https://suuuth-js-package-json-intro.surge.sh/',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-package-json-intro-AjvZZg/issues/1',
+  project: 'github-project'
+})
+createPage({
+  title: 'Express Server with EJS Project',
+  location: 'https://suuuth-js-serving-content-with.herokuapp.com/',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-serving-content-with-express-OctGcX/issues/1',
+  project: 'github-project'
+})
+createPage({
+  title: 'API Project',
+  location: 'https://github.com/suuuth/MI-449-SS18-740-js-create-an-api-with-express-URJy-_/blob/master/server.js',
+  about: 'https://github.com/suuuth/MI-449-SS18-740-js-create-an-api-with-express-URJy-_/issues/1',
+  project: 'github-project'
+})
 
 createPage({
   title: 'Home',
@@ -24,9 +78,23 @@ createPage({
   location: '/portfolio'
 })
 
+// function createGitLink (page) {
+//   var id = Object.keys(githubPages).length
+//   githubPages[id] = page
+// }
+
 function createPage (page) {
-  var id = Object.keys(pages).length
-  pages[id] = page
+  if (page.project === 'github-project') {
+    // createGitLink(page)
+    let id = Object.keys(githubPages).length
+    githubPages[id] = page
+  } else {
+    let id = Object.keys(pages).length
+    pages[id] = page
+  }
+
+  console.log(pages)
+  console.log(githubPages)
 }
 
 app.set('view engine', 'ejs')
@@ -34,6 +102,7 @@ app.use(express.static('public'))
 app.get('/', function (request, response) {
   response.render('pages/index', {
     pages: pages,
+    githubPages: githubPages,
     url: request.url
   })
 })
@@ -45,6 +114,7 @@ app.get('/resume', function (request, response) {
 app.get('/portfolio', function (request, response) {
   response.render('pages/portfolio', {
     pages: pages,
+    githubPages: githubPages,
     url: request.url
   })
 })
