@@ -10,7 +10,7 @@
     "build:html": "htmlhint *.html",
     "build:js": "standard *.js",
     "build": "run-s build:*",
-    "deploy": "run-s build" // run GIT PUSH HEROKU MASTER to update live site
+    "deploy": "run-s build"
   },
   "devDependencies": {
     "htmlhint": "^0.9.13",
