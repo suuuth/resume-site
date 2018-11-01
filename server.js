@@ -1,5 +1,13 @@
 
 // run GIT PUSH HEROKU MASTER to update live site
+
+/* TODO
+*
+*  Reduce font size of skills-lists or increase font size of skills-list headers
+*  Add scrollable css animations with waypoints.jquery lib
+*  Consider adjusting style of embedded menus on nav
+*/
+
 var express = require('express')
 var app = express()
 var port = process.env.PORT || 8080
