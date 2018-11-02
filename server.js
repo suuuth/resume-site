@@ -3,7 +3,6 @@
 
 /* TODO
 *
-*  Reduce font size of skills-lists or increase font size of skills-list headers
 *  Add scrollable css animations with waypoints.jquery lib
 *  Consider adjusting style of embedded menus on nav
 */
