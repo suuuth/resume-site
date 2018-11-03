@@ -1,6 +1,4 @@
 
-var aboutMe = document.querySelector('.about-me-js')
-
 function aboutMeScroll () {
     var scrollAbout = header.clientHeight
     window.scroll({
@@ -9,4 +7,4 @@ function aboutMeScroll () {
     })
 }
 
-aboutMe.addEventListener('click', aboutMeScroll)
+document.querySelector('.about-me-js').addEventListener('click', aboutMeScroll)

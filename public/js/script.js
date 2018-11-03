@@ -7,12 +7,12 @@ function showNav () {
 
     if (_nav) {
         NavMenu.style.display = "flex"
-        setTimeout(function () { 
+        setTimeout(function () {
             NavMenu.classList.add('show')
          }, 100);
     } else {
         NavMenu.classList.remove('show')
-        setTimeout(function () { 
+        setTimeout(function () {
             NavMenu.style.display = ""
         }, 100);
     }
