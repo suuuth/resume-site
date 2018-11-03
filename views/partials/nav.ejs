@@ -5,12 +5,13 @@
   <div id="close-nav" class="close-btn">X</div>
   <div class="nav-wrap">
     <ul class="nav">
+
       <% Object.keys(pages).forEach(function (id) { %>
-      <li>
         <% if (pages[id].title != 'Github') { %>
-          <a href="<%= pages[id].location %>"><%= pages[id].title %></a>
+          <li><a href="<%= pages[id].location %>"><%= pages[id].title %></a></li>
         <% } else { %>
-          <a href="<%= pages[id].location %>"><%= pages[id].title %>
+          <li><a href="<%= pages[id].location %>"><%= pages[id].title %></a>
+
             <ul class="sub-menu">
               <% Object.keys(githubPages).forEach(function (id) { %>
                 <li>
@@ -21,9 +22,9 @@
                 </li>
               <% }) %>
             </ul>
-          </a>
+
+          </li>
         <% } %>
-      </li>
       <% }) %>
     </ul>
     <hr>
@@ -31,5 +32,5 @@
       <li><a href="http://bit.ly/linkedin-ksutherland">LinkedIn</a></li>
     </ul>
   </div>
+  <script src="../../js/nav.js"></script>
 </nav>
-<script src="../../js/nav.js"></script>
