@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
-    "dev:server": "node server.js",
+    "dev:server": "nodemon server.js",
     "dev": "run-s dev:*",
     "build:stylelint": "stylelint 'public/styles/source/scss/*.scss'",
     "build:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "ejs": "^2.5.9"
+    "ejs": "^2.5.9",
+    "nodemon": "^1.11.0"
   }
 }

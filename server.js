@@ -5,6 +5,7 @@
 *
 *  Add scrollable css animations with waypoints.jquery lib
 *  Consider adjusting style of embedded menus on nav
+*  Fix tooltips
 */
 
 var express = require('express')
