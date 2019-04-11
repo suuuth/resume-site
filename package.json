@@ -1,6 +1,9 @@
 {
   "name": "Kevin-Sutherland-Resume",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.11.3"
+  },
   "scripts": {
     "dev:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
     "dev:server": "nodemon server.js",
@@ -24,9 +27,6 @@
   "dependencies": {
     "ejs": "^2.5.9",
     "express": "^4.16.3",
-    "graphicsmagick": "^0.0.1",
-    "node-gyp": "^3.8.0",
-    "nodemon": "^1.11.0",
-    "rebuild": "^0.1.2"
+    "nodemon": "^1.11.0"
   }
 }
