@@ -7,9 +7,10 @@
       <small>Below you will see a collection of projects that I have helped develop.  Mouse over each image, and click on them for more information.</small>
     </div>
     <% } else { %>
-    <h1 class="fade-in"><%= pages[0].heading %></h1>
+    <h1 class="page-title">Kevin Sutherland</h1>
+    <p class="page-header fade-in"><%= pages[0].heading %></p>
     <div class="wrap">
-      <div class="btn slide-in-left about-me-js">Learn About Me</div>
+      <div class="btn slide-in-left about-me-js" role="button" tabindex="0">Learn About Me</div>
     </div>
     <script src="../../js/about-me.js"></script>
     <% } %>
