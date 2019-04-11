@@ -1,6 +1,7 @@
 {
   "name": "Kevin-Sutherland-Resume",
   "version": "1.0.0",
+  "private": true,
   "engines": {
     "node": "8.11.3"
   },
