@@ -9,8 +9,6 @@
     "dev:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
     "dev:server": "nodemon server.js",
     "dev": "run-s dev:*",
-    "build:stylelint": "stylelint 'public/styles/source/scss/*.scss'",
-    "build:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
     "build:html": "htmlhint *.html",
     "build:js": "standard *.js",
     "build": "run-s build:*",
