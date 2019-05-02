@@ -11,6 +11,7 @@
 var express = require('express')
 var app = express()
 
+// const gm = require('gm')
 // const imageToAscii = require('image-to-ascii')
 // imageToAscii("https://i.imgur.com/BsTHtXU.jpg", (err, converted) => {
 //     console.log(err || converted);
