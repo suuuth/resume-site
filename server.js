@@ -108,7 +108,8 @@ app.get('/', function (request, response) {
 app.get('/resume', function (request, response) {
   response.render('pages/resume', {
     pages: pages,
-    githubPages: githubPages
+    githubPages: githubPages,
+    url: request.url
   })
 })
 app.get('/portfolio', function (request, response) {
