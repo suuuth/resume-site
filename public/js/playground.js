@@ -17,17 +17,23 @@ function Waypoint ( options ) {
   this.element = options.element
   this.animation = options.animation
   this.offset = options.offset
+  this.triggered = false
 
   allWaypoints[this.key] = this
   keyCounter = keyCounter + 1
 
-  console.log ( allWaypoints )
-}
+  // console.log ( allWaypoints )
 
-// the 'scroll' event only reliably fires when it's attached to the 'window', since that
-// is the thing that is actually scrolling.  Not the individual elements.  So we need to
-// fire an event when the /window/ is scrolled, and check every Waypoint to see if anything
-// has been hit
+  let that = this
+  window.addEventListener('scroll', function () {
+    if ( !that.triggered )
+      if ( that.element.getBoundingClientRect().top <= that.offset ) {
+        that.element.classList.add(that.animation)
+        that.element.classList.remove('waypoint-js')
+        that.triggered = true
+      }
+  })
+}
 
 // get and loop through every element with a declared waypoint
 var waypoints = document.getElementsByClassName('waypoint-js')
@@ -38,29 +44,6 @@ for ( let point of waypoints ) {
     offset: window.innerHeight / 1.6
   })
 }
-
-// create the event function
-window.addEventListener('scroll', function (e) {
-
-  // check if any of our Waypoint offsets have been hit
-  Object.keys(allWaypoints).forEach(function (waypoint) {
-
-    // Because scroll calculations happen quickly and not incrementing by 1,
-    // it is likely we may jump right over our Offset target.  To account for this,
-    // we consider that we want the animations to happen as the user scrolls DOWN the page.
-    // Because of this, we can check if the user is at the desired location, OR has passed the desired location
-    if (
-      allWaypoints[waypoint].element.classList.contains('waypoint') &&
-      allWaypoints[waypoint].element.getBoundingClientRect().top <= allWaypoints[waypoint].offset
-    ) {
-      allWaypoints[waypoint].element.classList.remove('waypoint')
-      allWaypoints[waypoint].element.classList.add(allWaypoints[waypoint].animation)
-    }
-  })
-})
-
-
-
 
 
 // *
