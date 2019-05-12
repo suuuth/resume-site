@@ -5,17 +5,10 @@
 *
 *  Add scrollable css animations with waypoints.jquery lib
 *  Consider adjusting style of embedded menus on nav
-*  Fix tooltips
 */
 
 var express = require('express')
 var app = express()
-
-// const gm = require('gm')
-// const imageToAscii = require('image-to-ascii')
-// imageToAscii("https://i.imgur.com/BsTHtXU.jpg", (err, converted) => {
-//     console.log(err || converted);
-// });
 
 var port = process.env.PORT || 8080
 var pages = {}

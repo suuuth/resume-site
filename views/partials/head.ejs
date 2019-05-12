@@ -15,5 +15,4 @@
   <link rel="stylesheet" type="text/css" href="../../styles/compiled/css/style.css">
   <title>Kevin Sutherland</title>
 </head>
-<body>
-  <div class="hidden url-js"><%= url %></div>
+<body class="url-js <%= url == '/resume' ? 'hide-overflow' : '' %>" url="<%= url %>">
