@@ -22,8 +22,6 @@ function Waypoint ( options ) {
   allWaypoints[this.key] = this
   keyCounter = keyCounter + 1
 
-  // console.log ( allWaypoints )
-
   let that = this
   window.addEventListener('scroll', function () {
     if ( !that.triggered )
@@ -38,10 +36,11 @@ function Waypoint ( options ) {
 // get and loop through every element with a declared waypoint
 var waypoints = document.getElementsByClassName('waypoint-js')
 for ( let point of waypoints ) {
+  let offset = window.innerHeight / ( point.getAttribute('offset') || 1.6 )
   var waypoint = new Waypoint({
     element: point,
     animation: point.getAttribute('animation'),
-    offset: window.innerHeight / 1.6
+    offset: offset
   })
 }
 
