@@ -106,10 +106,13 @@ app.get('/resume', function (request, response) {
   })
 })
 app.get('/portfolio', function (request, response) {
+  let portfolio = require('./backend_js/portfolio_data.js')
+
   response.render('pages/portfolio', {
     pages: pages,
     githubPages: githubPages,
-    url: request.url
+    url: request.url,
+    portfolio: portfolio
   })
 })
 

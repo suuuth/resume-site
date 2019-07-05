@@ -7,12 +7,36 @@
 <main class="portfolio-index">
   <div class="project-display">
 
+  <% Object.keys(portfolio).forEach(function (id) { %>
+
+    <h2><%= id %></h2>
+
+    <% Object.keys(portfolio[id].projects).forEach(function (pid) { %>
+
+    <div class="project">
+      <h3><%= pid %></h3>
+      <a href="<%= portfolio[id].projects[pid].link %>"><%= portfolio[id].projects[pid].description %></a>
+      <img src="<%= portfolio[id].projects[pid].imagePath %>" alt="<%= portfolio[id].projects[pid].imageAltTxt %>">
+    </div>
+
+    <% }) %>
+  <% }) %>
+
+  </div>
+</main>
+
+<% include ../partials/footer %>
+
+
+
+<!--
     <div class="project">
       <a class="project-link" href="http://kora3.matrix.msu.edu/">
-        <img src="../../images/portfolio/kora.png" alt="Templates Project">
+        <img src="../../images/portfolio/kora.png" alt="Kora 3 project image">
         <div class="content">
           <div class="title">Kora 3</div>
           <div class="description">
+-->
 
           <!-- Notes:
           | Web Application
@@ -29,6 +53,7 @@
           | | Sass / CSS
           | | HTML5 -->
 
+<!--
         I currently spend all of my time working on this.  This project is a web application that functions as a digital respository for Matrix's clients to use for data management.  This application utilizes a RESTful API which is written in Php using the Laravel framework.  Laravel comes with a few more tools, including Compass (Command line tool for compiling Sass files) as well as Blade for templating.  Prior to working on this, I had never used Larvel or Php.  I learned both of these skills on-the-job as I worked with the help of my co-workers at Matrix, StackExchange, and the Laravel Docs.  This project also features JQuery and JQuery-UI, heavy use of Ajax, and Sass.</div>
         </div>
       </a>
@@ -43,12 +68,15 @@
     </div>
 
     <div class="project">
+-->
       <!-- TODO: Photoshop the logo onto the picutre just like with Halcyon Sailing! -->
+
+<!--
       <a class="project-link" href="http://liberatedafricans.org/">
         <img src="../../images/portfolio/libafr.jpg" alt="Liberated Africans">
         <div class="content">
           <div class="title">Liberated Africans</div>
-          <div class="description">I did not create this site!  This was an existing site at Matrix that desperately needed attention from a good front-end developer.  I have done constant maintenance on this site in the form of refactoring code, restructuring CSS to help reduce redundant code, removing any and all inline CSS from HTML files, and updating icons and images as needed.  Besides this, I completely restructured some of these pages <!-- (<a href="http://liberatedafricans.org/searchResults.php?keyword=ogoo">search result page</a>, and <a href="http://liberatedafricans.org/events.php?eventType%5B%5D=Case">Cases page</a> for example)  -->with more up-to-date CSS properties to make them more mobile-friendly and cross-browser compatible.</div>
+          <div class="description">I did not create this site!  This was an existing site at Matrix that desperately needed attention from a good front-end developer.  I have done constant maintenance on this site in the form of refactoring code, restructuring CSS to help reduce redundant code, removing any and all inline CSS from HTML files, and updating icons and images as needed.  Besides this, I completely restructured some of these pages --><!-- (<a href="http://liberatedafricans.org/searchResults.php?keyword=ogoo">search result page</a>, and <a href="http://liberatedafricans.org/events.php?eventType%5B%5D=Case">Cases page</a> for example)  --><!-- with more up-to-date CSS properties to make them more mobile-friendly and cross-browser compatible.</div>
         </div>
       </a>
     </div>
@@ -64,7 +92,7 @@
     </div>
 
     <div class="project">
-      <!-- TODO: Photoshop the logo onto this image -->
+      --><!-- TODO: Photoshop the logo onto this image --><!--
       <a class="project-link" href="http://halcyonsailing.net/">
         <img src="../../images/portfolio/halcyon.jpg" alt="halcyon sailing">
         <div class="content">
@@ -78,3 +106,5 @@
 </main>
 
 <% include ../partials/footer %>
+
+-->
