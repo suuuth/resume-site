@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "8.11.3"
+    "node": "10.16.3"
   },
   "scripts": {
     "dev:sass": "node-sass public/styles/source/scss/style.scss --output=public/styles/compiled/css --output-style=compressed --source-map=true",
@@ -27,6 +27,6 @@
     "ejs": "^2.5.9",
     "express": "^4.16.3",
     "nodemon": "^1.11.0",
-    "waypoints": "^4.0.1"
+    "yarn": "^1.21.1"
   }
 }

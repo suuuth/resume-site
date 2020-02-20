@@ -4,32 +4,32 @@ module.exports = {
   'Matrix': {
     projects: {
       'Kora 3': {
-        description: 'I currently spend all of my time working on this.  This project is a web application that functions as a digital respository for Matrix\'s clients to use for data management.  This application utilizes a RESTful API which is written in Php using the Laravel framework.  Laravel comes with a few more tools, including Compass (Command line tool for compiling Sass files) as well as Blade for templating.  Prior to working on this, I had never used Larvel or Php.  I learned both of these skills on-the-job as I worked with the help of my co-workers at Matrix, StackExchange, and the Laravel Docs.  This project also features JQuery and JQuery-UI, heavy use of Ajax, and Sass.',
+        description: `I currently spend all of my time working on this.  This project is a web
+         application that functions as a digital respository for Matrix\'s clients to use for
+         data management.  This application utilizes a RESTful API which is written in PHP using
+         Laravel.  On this project, we utilized Compass, SASS, and Blade for templating.  Prior
+         to working on this, I had never worked with Larvel or wrote any PHP.  I learned both of
+         these skills on-the-job by teaching myself through trial-and-error troubleshooting, by
+         asking my co-workers questions, and by google searching just about everything.
+         StackExchange, the Laravel Documentation, PHP manual pages, MDN, and CSS tricks became
+         my best friends.  Aside from PHP, SASS, and Blade, this project also invloved heavy
+         use of JQuery, JQuery-UI, and Ajax.`,
         link: 'http://kora3.matrix.msu.edu/',
         imagePath: '../../images/portfolio/kora.png',
-        imageAltTxt: 'Kora 3 project image'
+        imageAltTxt: 'Kora 3 project logo'
       },
-      'placeholder': {
-        description: 'placeholder description',
-        link: 'www.google.com',
-        imagePath: '../../images/portfolio/kora.png',
-        imageAltTxt: 'placeholder'
-      }
     }
   },
   'Personal Work': {
     projects: {
-      'placeholder 1': {
-        description: 'placeholder description 1',
+      'Halcyon Sailing': {
+        description: `This was the first real website I helped create.  I started this during
+          my junior year of high school for my dad, who had always dreamed of owning his own
+          sailing school and charter business. This was primarily made with Wordpress with a
+          little bit of HTML, CSS, and JS to help iron out the bugs.`,
         link: 'www.google.com',
-        imagePath: '../../images/portfolio/kora.png',
-        imageAltTxt: 'placeholder 1'
-      },
-      'placeholder 2': {
-        description: 'placeholder description 2',
-        link: 'www.google.com',
-        imagePath: '../../images/portfolio/kora.png',
-        imageAltTxt: 'placeholder 2'
+        imagePath: '../../images/portfolio/halcyon.jpg',
+        imageAltTxt: 'halcyon sailing header image'
       }
     }
   }
