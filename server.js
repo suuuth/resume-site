@@ -80,7 +80,7 @@ createPage({
 })
 
 function createPage (page) {
-  if ( page.project ) {
+  if (page.project) {
     let id = Object.keys(githubPages).length
     githubPages[id] = page
   } else {
