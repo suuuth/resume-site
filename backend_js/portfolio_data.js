@@ -27,7 +27,7 @@ module.exports = {
           my junior year of high school for my dad, who had always dreamed of owning his own
           sailing school and charter business. This was primarily made with Wordpress with a
           little bit of HTML, CSS, and JS to help iron out the bugs.`,
-        link: 'www.google.com',
+        link: 'http://halcyonsailing.net/',
         imagePath: '../../images/portfolio/halcyon.jpg',
         imageAltTxt: 'halcyon sailing header image'
       }
